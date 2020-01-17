@@ -26,9 +26,10 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: ng update @angular/cli --migrate-only --from=8.3.21
+      - run: sudo npm i @angular/cli
       - run: npm i
-      - run: ng build 
+      - run: npm audit fix --force
+      - run: ng serve -o 
 
       - save_cache:
           paths:
