@@ -28,7 +28,7 @@ jobs:
 
       - run: npm i
       - run: npm audit fix --force
-      - run: ng serve -o 
+     
 
       - save_cache:
           paths:
